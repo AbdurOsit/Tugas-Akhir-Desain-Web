@@ -1,0 +1,17 @@
+[
+  {
+    "jenis": "masuk",
+    "keterangan": "Uang Saku Mingguan",
+    "nominal": 250000
+  },
+  {
+    "jenis": "keluar",
+    "keterangan": "Beli Kebutuhan Rumah/Kost",
+    "nominal": 35000
+  },
+  {
+    "jenis": "keluar",
+    "keterangan": "Makan di Geprek Maszeh",
+    "nominal": 15000
+  }
+]

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buku Kas & Lingkungan Pribadi</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>Buku Kas <span id="nama-user"></span></h1>
+        <p id="lokasi-user" style="margin: 5px 0 0 0; font-size: 14px;">Memuat lokasi...</p>
+    </header>
+
+    <!-- BAGIAN BARU: Cerita & Foto Lingkungan -->
+    <section class="lingkungan-section">
+        <div class="cerita-box">
+            <h2>Tentang Lingkungan Rumah Saya</h2>
+            <p>
+                Saya tinggal di sebuah perumahan yang masih sangat asri karena berbatasan langsung dengan area persawahan desa. 
+                Suasana kekeluargaan di lingkungan ini sangat kental, salah satunya terlihat dari rutinitas warga yang rutin 
+                mengadakan kerja bakti. Di sore hari, lingkungan ini menjadi semakin hidup dengan riuhnya anak-anak yang 
+                bermain di lapangan beton di dekat musholla.
+            </p>
+        </div>
+        
+        <!-- Galeri Tempat Foto -->
+        <div class="galeri-foto">
+            <div class="foto-item">
+                <!-- GANTI "foto-gang.jpg" dengan nama file foto gang aslimu nanti -->
+                <img src="foto-gang.jpg" alt="Foto Depan Gang">
+                <p>Suasana Depan Gang</p>
+            </div>
+            <div class="foto-item">
+                <!-- GANTI "foto-lapangan.jpg" dengan nama file foto lapangan aslimu nanti -->
+                <img src="foto-lapangan.jpg" alt="Foto Lapangan Beton">
+                <p>Lapangan Dekat Musholla</p>
+            </div>
+            <div class="foto-item">
+                <!-- GANTI "foto-kerjabakti.jpg" dengan nama file foto kerja bakti aslimu nanti -->
+                <img src="foto-kerjabakti.jpg" alt="Warga Kerja Bakti">
+                <p>Kegiatan Kerja Bakti</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- BAGIAN LAMA: Aplikasi Buku Kas -->
+    <div class="container">
+        <!-- CARD UTAMA: Saldo & Form Input -->
+        <div class="card">
+            <div class="saldo-box">
+                <p style="margin: 0 0 5px 0; font-weight: 600;">Sisa Saldo Dompet</p>
+                <h2>Rp <span id="text-saldo">0</span></h2>
+            </div>
+
+            <form id="formKeuangan">
+                <div class="form-group">
+                    <label>Jenis Transaksi</label>
+                    <select id="jenisTransaksi">
+                        <option value="masuk">Pemasukan (Uang Saku/Transfer)</option>
+                        <option value="keluar">Pengeluaran (Belanja/Jajan/Iuran)</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label>Keterangan Transaksi</label>
+                    <input type="text" id="inputKeterangan" placeholder="Contoh: Iuran Kerja Bakti / Beli Gorengan">
+                    <div id="errorKeterangan" class="error-msg">Keterangan wajib diisi!</div>
+                </div>
+
+                <div class="form-group">
+                    <label>Nominal (Rp)</label>
+                    <input type="number" id="inputNominal" placeholder="Contoh: 15000">
+                    <div id="errorNominal" class="error-msg">Nominal harus angka yang valid (lebih dari 0)!</div>
+                </div>
+
+                <button type="submit">Tambah Transaksi</button>
+            </form>
+        </div>
+
+        <!-- CARD RIWAYAT: Daftar transaksi -->
+        <div class="card">
+            <h2 class="riwayat-title">Riwayat Transaksi Pribadi</h2>
+            <ul id="listRiwayat">
+                <!-- Data akan masuk ke sini via jQuery -->
+            </ul>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
