@@ -1,16 +1,17 @@
-/* =========================================
-   1. PENGATURAN DASAR & TIPOGRAFI
-   ========================================= */
+*{
+    box-sizing: border-box;
+}
+
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: #F8FAF7; /* Putih kehijauan lembut (asri) */
+    background-color: #F8FAF7;
     color: #222825;
     margin: 0;
     padding: 0;
 }
 
 header {
-    background-color: #2B5B3F; /* Hijau daun/sawah natural */
+    background-color: #2B5B3F;
     color: #FFFFFF;
     text-align: center;
     padding: 20px;
@@ -21,12 +22,9 @@ header h1 {
     font-size: 24px;
 }
 
-/* =========================================
-   2. TENTANG LINGKUNGAN (GALERI)
-   ========================================= */
 .lingkungan-section {
     background: #FFFFFF;
-    border: 2px solid #D5DDD7; /* Abu-abu lembut paving/beton */
+    border: 2px solid #D5DDD7;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(43, 91, 63, 0.06);
     max-width: 800px;
@@ -37,7 +35,7 @@ header h1 {
 
 .cerita-box h2 {
     color: #2B5B3F;
-    border-bottom: 3px solid #E9B824; /* Kuning padi/hangat */
+    border-bottom: 3px solid #E9B824;
     padding-bottom: 5px;
     margin-top: 0;
 }
@@ -79,9 +77,7 @@ header h1 {
     color: #2B5B3F;
 }
 
-/* =========================================
-   3. BUKU KAS (CARD, FORM, RIWAYAT)
-   ========================================= */
+/* Style Buku Keuangan */
 .container {
     display: flex;
     flex-direction: column;
@@ -136,7 +132,7 @@ input, select {
 }
 
 button {
-    background-color: #E9B824; /* Kuning aksen hangat */
+    background-color: #E9B824;
     color: #1A1F1C;
     font-weight: 700;
     border: none;
